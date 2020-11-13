@@ -22,3 +22,7 @@ urlpatterns = [
     path('polls/', include('polls.urls')),
     path('news/', include('news.urls')),
 ]
+
+admin.site.site_header = "DevTory Admin"
+admin.site.site_title = "DevTory Admin"
+admin.site.index_title = "Welcome to DevTory Admin"
