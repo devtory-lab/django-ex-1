@@ -1,0 +1,15 @@
+{% extends "news/base.html" %}
+
+{% block title %}Articles for {{ year }}{% endblock title %}
+
+{% block content %}
+<h1>Articles for {{ year }}</h1>
+<ul>
+{% for article in article_year_list %}
+    <li>
+        <a href="{% url 'news:detail' article.id %}">{{ article.id }} | {{ article.headline }} | By {{ article.reporter.full_name }} | Published {{ article.pub_date|date:"F j, Y" }}</a>
+    </li>
+{% endfor %}
+</ul>
+<a href="{% url 'news:index' %}">메인으로</a>
+{% endblock content %}

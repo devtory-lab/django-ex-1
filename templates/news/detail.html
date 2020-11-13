@@ -1,0 +1,13 @@
+{% extends "news/base.html" %}
+
+{% block title %}pk : {{ article.id }}{% endblock title %}
+
+{% block content %}
+    <h1>번호 : {{ article.id }}</h1>
+    <hr>
+    <p>HeadLine : {{ article.headline }}</p>
+    <p>By : {{ article.reporter.full_name }}</p>
+    <p>Published : {{ article.pub_date|date:"F j, Y" }}</p>
+    <p>Contents : {{ article.content }}</p>
+<a href="{% url 'news:index' %}">목록으로</a>
+{% endblock content %}
