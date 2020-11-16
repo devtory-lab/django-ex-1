@@ -16,10 +16,3 @@ class ReporterAdmin(admin.ModelAdmin):
 
 admin.site.register(Article, ArticleAdmin)
 admin.site.register(Reporter, ReporterAdmin)
-
-
-from django.contrib.auth.models import User, Group
-
-
-admin.site.unregister(User)
-admin.site.unregister(Group)
